@@ -14,6 +14,11 @@
 
 <section>
   <h3>Vanderbilt University's Properties Around Nashville</h3>
+  <div id="map"></div>
+</section>
+
+<section>
+  
   <p>Vanderbilt owns at least {{ vanderbilt_properties|length }} properties in the Metro Nashville Area. Here are some of them: </p>
   <div class="row" data-masonry='{"percentPosition": true }'>
 
@@ -27,7 +32,7 @@
                 <h5 class="card-title">{{ obj.Location }}</h5>
             </strong>
           </a>
-          <p class="card-text">is a {{ obj.Property_Use.toLowerCase()}} with a total value of {{ obj.Total_Appraisal_Value }}.</p>
+          <p class="card-text">is a {{ obj.Property_Use.toLowerCase()}} with a total value of {{ obj.Total_Appraisal_Value }}. <br> Acquired on {{ obj.Sale_Date }}</p>
         </div>
       </div>
       </div>
